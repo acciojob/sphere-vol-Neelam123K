@@ -6,9 +6,9 @@ function volume_sphere(event) {
 	const volumeInput = document.getElementById("volume");
 
 	const radius = parseFloat(radiusInput.value)
-	if(isNaN(radius) || radius >0){
-		volumeInput.value = "null";
-		return
+	if (isNaN(radius) || radius < 0) {
+		volumeInput.value = "NaN";
+		return;
 	}
 	const volume = (4/3)*Math.PI*math.pow(radius, 3);
 	volumeInput.value = volume.toFixed(4);
